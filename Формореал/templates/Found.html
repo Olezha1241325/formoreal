@@ -1,0 +1,29 @@
+{% extends "Base.html" %} {% block content %}
+<div class="container">
+  <div class="main-section">
+    <div class="main-section-success">
+      <a class="ch-link success-link" href="/get">&lt</a>
+      <div class="success-text">Файл {{ file_info.name }}</div>
+    </div>
+    <div class="look-or-load-section">
+        <a id="download_link" href="{{ file_info.link }}" download="" class="result-button">Скачать</a>
+        <a href="{{ file_info.link }}" target="_blanc" class="result-button">Посмотреть</a>
+    </div>
+    <div class="main-section-info">
+        Будет храниться ещё {{ file_info.life_time }}.
+    </div>
+  </div>
+</div>
+{% if settings.play_sounds == "on" %}
+  <video id="myaudio" controls="" autoplay="" name="media" preload="auto" hidden volume="0.2">
+    <source src="../static/audio/win.mp3" type="audio/mp3">
+  </video>
+{% endif %}
+{% if download %}
+<script>
+  let link = document.getElementById('download_link');
+  link.click();
+</script>
+{% endif %}
+<script src="../static/js/found_page.js"></script>
+{% endblock %}

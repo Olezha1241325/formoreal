@@ -1,0 +1,65 @@
+@media screen and (max-width: 520px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .main-section-nav {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .main-section-form {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .main-section-success {
+    padding-left: 0px;
+  }
+
+  .main-section-info {
+    padding-left: 10px;
+  }
+
+  .settings-blocks-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .email-block .foot-text:last-child {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .look-or-load-section a:first-child {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    clip-path: inset(-5px -5px 0px -5px);
+  }
+
+  .look-or-load-section a:last-child {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    clip-path: inset(0px -5px -5px -5px);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .foot {
+    flex-direction: column;
+  }
+
+  .about-foot-block {
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  .hour-input-container {
+    padding-bottom: 45px;
+  }
+}

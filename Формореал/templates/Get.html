@@ -1,0 +1,57 @@
+{% extends "Base.html" %} {% block content %}
+<div class="container">
+    <div class="main-section">
+        <div class="main-section-nav">
+            <div class="nav-container">
+                <a class="ch-link nav-link nav-link-chosen" href="/get">Взять</a>
+                <a class="ch-link nav-link nav-link-other" href="/put">Положить</a>
+            </div>
+        </div>
+        <div class="main-section-form">
+            <form method="POST" class="m-file-form">
+                {% if form_data is defined %}
+                  {% set key = form_data['file_key'] %}
+                {% else %}
+                {% set key = "" %}
+                {% endif %}
+                <div>
+                    <input name="file_key" type="text" class="ch-text-input key-text-input" placeholder="Введите ключ..." required="true" value="{{ key }}" />
+                </div>
+                {% if error_text is defined %}
+                    <div class="error-message-block">{{ error_text }}</div>
+                {% endif %}
+                <div class="radio-buttons-container">
+                    <!-- Конфигурация из настроек -->
+                    {% if settings.get == "download_it" %}
+                    {% set first_checked = "checked" %}
+                    {% set second_checked = "" %}
+                    {% else %}
+                    {% set first_checked = "" %}
+                    {% set second_checked = "checked" %}
+                    {% endif %}
+
+                    <!-- Конфигурация последней отправки формы -->
+                    {% if form_data is defined %}
+                    {% if form_data['method'] == 'check_it' %}
+                    {% set first_checked = "" %}
+                    {% set second_checked = "checked" %}
+                    {% else %}
+                    {% set first_checked = "checked" %}
+                    {% set second_checked = "" %}
+                    {% endif %}
+                    {% endif %}
+                    <div class="radio-button-container">
+                        <input id="radio-1" name="method" type="radio" value="download_it" {{ first_checked }} />
+                        <label for="radio-1">Скачать сразу!</label>
+                    </div>
+                    <div class="radio-button-container">
+                        <input id="radio-2" name="method" type="radio" value="check_it" {{ second_checked }} />
+                        <label for="radio-2">Сначала проверить</label>
+                    </div>
+                </div>
+                <input type="submit" class="submit-button safe-submit-button" value="Найти"/>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

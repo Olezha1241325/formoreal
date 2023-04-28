@@ -1,0 +1,109 @@
+{
+    "base": {
+        "protocol": "http",
+        "domain": "127.0.0.1:8080",
+        "host": "127.0.0.1",
+        "schedule_interval": 30,
+        "db_path": "db/ch_files.sqlite",
+        "main_css_path": "static/css/Style.css",
+        "logging_level": "DEBUG",
+        "logging_format": "%(asctime)s %(levelname)s %(filename)s %(message)s",
+        "necessary_dirs": ["files", "db"]
+    },
+    "consts": {
+        "secret_key_alpha": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "~", "`", "-", "=", "_", "+", " ", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "{", "}", "A", "S", "D", "F", "G", "H", "J", "K", "L", ":", "Z", "X", "C", "V", "B", "N", "M", "<", ">", "?"],
+        "file_key_alpha": "0123456789abcdefghijklmnopqrstuvwxyz",
+        "bad_chars": [" ", "/", "\\", "&", "?", "@", "'", "\"", "(", ")"],
+        "default_file_key": "abcdef",
+        "max_file_key": "zzzzzz"
+    },
+    "style_files_names": [
+        "main.css",
+        "base.css",
+        "about.css",
+        "settings.css",
+        "file_input.css",
+        "file_pages.css",
+        "adapter.css"
+    ],
+    "default_settings": {
+        ".no_deserialize": true,
+        "theme": "dark",
+        "default_hours": "1",
+        "start_page": "get",
+        "get": "download_it",
+        "copy": "none",
+        "play_sounds": "off"
+    },
+    "settings": {
+        "set_dict": {
+            ".no_deserialize": true,
+            "theme": "Тема",
+            "default_hours": "Время жизни по умолчанию",
+            "start_page": "Главная страница",
+            "get": "Опция скачивания по умолчанию",
+            "copy": "При загрузке автоматически копировать",
+            "play_sounds": "Звуковое оформление"
+        },
+        "theme": {
+            ".no_deserialize": true,
+            "dark": {
+                "name": "Тёмная",
+                "path": "../static/css/themes/dark.css"
+            },
+            "light": {
+                "name": "Светлая",
+                "path": "../static/css/themes/light.css"
+            },
+            "neon": {
+                "name": "Неоновая",
+                "path": "../static/css/themes/neon.css"
+            }
+        },
+        "default_hours": {
+            "min": "1",
+            "max": "24"
+        },
+        "start_page": {
+            ".no_deserialize": true,
+            "get": {
+                "name": "Взять",
+                "link": "/get"
+            },
+            "put": {
+                "name": "Положить",
+                "link": "/put"
+            }
+        },
+        "get": {
+            ".no_deserialize": true,
+            "download_it": {
+                "name": "Скачать сразу"
+            },
+            "check_it": {
+                "name": "Сначала проверить"
+            }
+        },
+        "copy": {
+            ".no_deserialize": true,
+            "none": {
+                "name": "Ничего"
+            },
+            "key": {
+                "name": "Ключ файла"
+            },
+            "link": {
+                "name": "Ссылку на файл"
+            }
+        },
+        "play_sounds": {
+            ".no_deserialize": true,
+            "on": {
+                "name": "Включить"
+            },
+            "off": {
+                "name": "Выключить"
+            }
+        }
+    }
+}

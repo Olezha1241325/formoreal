@@ -1,0 +1,106 @@
+{% extends "Base.html" %} {% block content %}
+<div class="container">
+  <div class="main-section">
+    <div class="main-section-success">
+      <a class="ch-link success-link" href="/put">&lt</a>
+      <div class="success-text">Успешно загружено!</div>
+    </div>
+    <div class="main-section-info">
+      <div class="result-block">
+        <p class="result-text">Ваш код:</p>
+        <div class="value-result-block">
+          <input
+            id="key-result-input"
+            type="text"
+            class="ch-text-input key-text-input result-text-input"
+            readonly
+            value="{{ file_info.key }}"
+          />
+          <button class="copy-button" onClick="copyFrom('key-result-input', 'key-copy-message');">
+            <svg
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-0.5 -0.5 19 19"
+            >
+              <rect
+                class="copy-rect f-copy-rect"
+                x="0.5"
+                y="0.5"
+                width="14"
+                height="14"
+              />
+              <rect
+                class="copy-rect s-copy-rect"
+                x="4"
+                y="4"
+                width="14"
+                height="14"
+                stroke-location="center"
+              />
+            </svg>
+          </button>
+          <div id="key-copy-message" class="copy-message"></div>
+        </div>
+      </div>
+      <div class="result-block">
+        <p class="result-text">Ссылка:</p>
+        <div class="value-result-block">
+          <input
+            id="link-result-input"
+            type="text"
+            class="ch-text-input key-text-input result-text-input"
+            readonly
+            value="{{ file_info.link }}"
+          />
+          <button class="copy-button" onClick="copyFrom('link-result-input', 'link-copy-message');">
+            <svg
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-0.5 -0.5 19 19"
+            >
+              <rect
+                class="copy-rect f-copy-rect"
+                x="0.5"
+                y="0.5"
+                width="14"
+                height="14"
+              />
+              <rect
+                class="copy-rect s-copy-rect"
+                x="4"
+                y="4"
+                width="14"
+                height="14"
+                stroke-location="center"
+              />
+            </svg>
+          </button>
+          <div id="link-copy-message" class="copy-message"></div>
+        </div>
+      </div>
+      <div class="result-block">
+        <p class="result-text">
+          Будут действовать в течение {{ file_info.hours }} {{ word_hour_form }} с момента загрузки.
+        </p>
+      </div>
+    </div>
+  </div>
+  {% if settings.play_sounds == "on" %}
+    <video id="myaudio" controls="" autoplay="" name="media" preload="auto" hidden volume="0.2">
+      <source src="../static/audio/win.mp3" type="audio/mp3">
+    </video>
+  {% endif %}
+</div>
+<script src="../static/js/uploaded_page.js"></script>
+{% if settings.copy == "key" %}
+<script>
+  copyFrom('key-result-input', 'key-copy-message');
+</script>
+{% elif settings.copy == "link" %}
+<script>
+  copyFrom('link-result-input', 'link-copy-message');
+</script>
+{% endif %}
+{% endblock %}

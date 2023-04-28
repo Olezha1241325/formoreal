@@ -1,0 +1,62 @@
+{% extends "Base.html" %} {% block content %}
+<div class="settings-block">
+  <div class="container">
+    <div class="settings-caption"><div>Настройки для устройства</div></div>
+       <form method="POST" class="settings-form">
+          <div class="settings-blocks-container">
+            {% for setting_name in settings.set_data.set_dict.keys() %}
+            {% set setting = settings.set_data.__getattribute__(setting_name) %}
+            <div>
+              <div class="box-caption">{{ settings.set_data.set_dict[setting_name] }}</div>
+              <div class="box-input">
+              {% if setting_name == "theme" %}
+              <div class="setting-container">
+                <select class="ch-select" name="theme">
+                    {% for key in setting.keys() %}
+                    <option value="{{ key }}" {% if key == settings.theme %} selected {% endif %}>{{ setting[key].name }}</option>
+                    {% endfor %}
+                </select>
+              </div>
+              {% elif setting_name == "default_hours" %}
+              <div class="setting-container hour-input-container">
+                <input
+                  name="{{ setting_name }}"
+                  type="number"
+                  class="ch-text-input hour-text-input"
+                  min="{{ setting.min }}"
+                  max="{{ setting.max }}"
+                  value="{{ settings.default_hours }}"
+                />
+                <p class="hour-input-text">час(а/ов)</p>
+              </div>
+              {% else %}
+                {% for key in setting.keys() %}
+                  <div class="radio-button-container">
+                      <input id="radio-{{ key }}" name="{{ setting_name }}" type="radio" value="{{ key }}" {% if key == settings.__getattribute__(setting_name) %} checked {% endif %} />
+                      <label for="radio-{{ key }}">
+                          {{ setting[key].name }}
+                      </label>
+                  </div>
+                {% endfor %}
+              {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+         </div>
+        <div class="submit-container">
+            <input type="submit" class="submit-button" value="Сохранить" />
+        </div>
+     </form>
+    </div>
+</div>
+<div class="about-settings-block">
+  <div class="container">
+    <section>
+        Добро пожаловать на страницу настроек. Здесь вы можете изменять поведение Формореала
+        для устройства, с которого часто заходите. Обратите внимание, что настройки хранятся
+        в cookies (они свои для каждого вашего браузера). <b>Если вы отключили cookies,
+        настройки работать не будут.</b>
+    </section>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,216 @@
+body {
+  color: #e8e8e8;
+  background-color: #141312;
+}
+
+.HEAD {
+  background-color: #1a1614;
+  border-bottom-color: #080807;
+}
+
+.FOOT {
+  background-color: #1c1b1a;
+}
+
+.logo-text {
+  color: #e3d9c1;
+}
+
+.ch-link {
+  color: #baae9b;
+}
+
+.ch-link:hover,
+.ch-link:focus {
+  color: #faf6eb;
+  background-color: #bdb3a278;
+}
+
+.nav-link {
+  color: #d6d2c7;
+}
+
+.nav-link-chosen {
+  border-bottom-color: #d6d2c7;
+}
+
+.text-link {
+  color: #e8e8e8;
+}
+
+.main-section-form {
+  border-color: #a8852a;
+}
+
+.ch-text-input {
+  background-color: #1a1917;
+  border-color: #4a4845;
+  color: #f5f4ed;
+}
+
+.ch-text-input::placeholder {
+  color: #8a8a8a;
+}
+
+.ch-text-input:focus {
+  border-color: #bdbdbd;
+}
+
+.ch-text-input:focus,
+.copy-button:hover,
+.result-text-input:hover {
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.radio-button-container label {
+  color: #e3e3e3;
+}
+
+.radio-button-container label:before {
+  border-color: #b89d16;
+}
+
+.radio-button-container input:checked + label:before {
+  background-color: #b89d16;
+  border-color: rgba(0, 0, 0);
+}
+
+.radio-button-container label:hover:before {
+  border-color: #ffd503;
+}
+
+.submit-button {
+  color: #a8a8a8;
+  border-color: #a8a8a8;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  color: #d9d9d9;
+  border-color: #d9d9d9;
+  background-color: #bdb3a23c;
+}
+
+.fast-submit-button:hover {
+  color: #bf2436;
+  border-color: #bf2436;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.error-message-block {
+  color: #d12d17;
+  border-color: #b53422;
+}
+
+.copy-button {
+  background-color: #1a1917;
+  border-color: #4a4845;
+}
+
+.copy-rect {
+  stroke: #d9d9d9;
+  fill: rgba(0, 0, 0, 0);
+}
+
+.copy-button:hover .copy-rect {
+  stroke: #47b8d1;
+}
+
+.copy-message {
+  color: #baae9b;
+}
+
+.result-button {
+  color: #d6d2c7;
+  border-color: #d6d2c7;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.1s ease;
+}
+
+.result-button:hover {
+  color: white;
+  background-color: #bdb3a23c;
+}
+
+.foot-text {
+  color: #baae9b;
+}
+
+.problem-block {
+  background-image: url(../../img/bricks.jpg);
+}
+
+.problem-block section,
+.conclusion-block section,
+.about-settings-block section {
+  color: #d6d4cb;
+}
+
+.solution-block section {
+  color: #deddd9;
+}
+
+.comparison-block {
+  background-image: url(../../img/desks.jpg);
+}
+
+.comparison-table td,
+.comparison-table th {
+  border-color: #30302fcf;
+}
+
+.comparison-td div.plus {
+  color: #18780a;
+}
+
+.comparison-td div.minus {
+  color: #ad2411;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: #2b2b2b;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #75736f;
+  border-color: black;
+}
+
+body::-webkit-scrollbar-thumb,
+.left-menu::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-color: black;
+}
+
+.ch-file-input-button {
+  color: #baae9b;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ch-file-input-button:hover {
+  color: #faf6eb;
+  background-color: #bdb3a278;
+}
+
+.ch-file-input-text {
+  color: #e8e8e8;
+}
+
+.ch-select {
+  color: #f2f2f2;
+  border-color: #b89d16;
+  background-color: #121210;
+}
+
+.ch-select:hover {
+  box-shadow: 0 0 0 0.2rem #e5ba1ea8;
+}
+
+.settings-block {
+  background-image: url(../../img/horizontal_desks.jpg);
+}

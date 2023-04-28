@@ -1,0 +1,224 @@
+body {
+  color: #e8e8e8;
+  background-color: #0f0f0f;
+}
+
+.HEAD {
+  background-color: #1a1a1a;
+  border-bottom-color: #080807;
+}
+
+.FOOT {
+  background-color: #1c1b1a;
+}
+
+.logo-text {
+  color: #d9d8d7;
+}
+
+.ch-link {
+  color: #b8b8b8;
+}
+
+/* "not" added for not to conflct with .success-link paddings */
+.ch-link:not(.success-link) {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.ch-link:hover,
+.ch-link:focus {
+  color: #05f2e2;
+  background-color: #00000078;
+  box-shadow: 0 0 3px 0.15rem #05f2e2a8;
+}
+
+.nav-link {
+  color: #b8b8b8;
+}
+
+.nav-link-chosen {
+  border-bottom-color: #b8b8b8;
+}
+
+.main-section-form {
+  border-color: black;
+  box-shadow: 0 0 4px 0.2rem #ffb805cf;
+}
+
+.ch-text-input {
+  background-color: #1a1917;
+  border-color: #4a4845;
+  color: #f5f4ed;
+}
+
+.ch-text-input::placeholder {
+  color: #8a8a8a;
+}
+
+.ch-text-input:focus {
+  border-color: #bdbdbd;
+}
+
+.ch-text-input:focus {
+  border-color: #1db31b9e;
+  box-shadow: 0 0 3px 0.2rem #1db31b9e;
+}
+
+.result-text-input {
+    color: #e8e8e8;
+}
+
+.copy-button:hover,
+.result-text-input:focus {
+  border-color: #1b9fb39e;
+  box-shadow: 0 0 3px 0.2rem #1b9fb39e;
+}
+
+.radio-button-container label {
+  color: #e3e3e3;
+}
+
+.radio-button-container label:before {
+  border-color: #ecc608;
+  margin-right: 8px;
+}
+
+.radio-button-container input:checked + label:before {
+  background-color: #ecc608;
+  border-color: rgba(0, 0, 0);
+  box-shadow: 0 0 3px 0.14rem #ffd503b9;
+}
+
+.radio-button-container label:hover:before {
+  box-shadow: 0 0 3px 0.14rem #ffd503b9;
+}
+
+.submit-button {
+  color: #a8a8a8;
+  border-color: #a8a8a8;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  color: #d60d61d7;
+  border-color: #d60d61d7;
+  box-shadow: 0 0 2px 0.1rem #d60d61d7;
+}
+
+.error-message-block {
+  color: #d12d17;
+  box-shadow: 0 0 3px 0.2rem #b53422;
+  border-width: 0px;
+}
+
+.copy-button {
+  background-color: #1a1917;
+  border-color: #4a4845;
+  transition: 0.2s all ease-in;
+}
+
+.copy-rect {
+  stroke: #47b8d1;
+  fill: rgba(0, 0, 0, 0);
+}
+
+.copy-message {
+  color: #b5b5b5;
+}
+
+.result-button {
+  color: #d6d2c7;
+  border-color: #d6d2c7;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.1s ease;
+}
+
+.result-button:hover {
+  color: white;
+  background-color: #bdb3a23c;
+}
+
+.foot-text {
+  color: #bdbdbd;
+}
+
+.problem-block {
+  background-image: url(../../img/bricks.jpg);
+}
+
+.problem-block section,
+.conclusion-block section,
+.about-settings-block section {
+  color: #d6d6d4;
+}
+
+.solution-block section {
+  color: #e2e1dd;
+}
+
+.comparison-block {
+  background-image: url(../../img/desks.jpg);
+}
+
+.comparison-table td,
+.comparison-table th {
+  border-color: #30302fcf;
+}
+
+.comparison-td div.plus {
+  color: #28c410;
+}
+
+.comparison-td div.minus {
+  color: #f82206;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: #2b2b2b;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #75736f;
+  border-color: black;
+}
+
+body::-webkit-scrollbar-thumb,
+.left-menu::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-color: black;
+}
+
+.ch-file-input-button {
+  color: #c1c1c0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.ch-file-input-button:hover {
+  color: #ff00f7d9;
+  background-color: #00000094;
+  box-shadow: 0 0 6px #ff00f7d9;
+}
+
+.ch-file-input-text {
+  color: #e8e8e8;
+}
+
+.ch-select {
+  color: #f2f2f2;
+  border-color: #b89d16;
+  background-color: #121210;
+}
+
+.ch-select:hover {
+  box-shadow: 0 0 5px 0.2rem #ffc803c0;
+}
+
+.settings-block {
+  background-image: url(../../img/horizontal_desks.jpg);
+}

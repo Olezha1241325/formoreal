@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+
+    <link rel="stylesheet" href="{{ '../' + settings.main_css_path }}" />
+
+    <link rel="stylesheet" href="{{ settings.set_data.theme[settings.theme].path }}" />
+    <link rel="stylesheet" href="../static/css/adapter.css" />
+
+    <script src="../static/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/497b41eca7.js" crossorigin="anonymous"></script>
+
+    <title>Формореал</title>
+  </head>
+  <body>
+    <head role="banner">
+      <div class="HEAD">
+        <div class="head">
+          <div class="logo-block">
+            <a class="logo" href="/"></a>
+            <a class="logo-text" href="/">Формореал</a>
+          </div>
+          <div class="right-block">
+            {% if settings.path == "/about" %}
+            <a class="ch-link head-link" href="/">Главная</a>
+            {% else %}
+            <a class="ch-link head-link" href="/about">О проекте</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </head>
+    <main role="main">
+      <div class="main-content">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    <footer role="contentinfo">
+      <div class="FOOT">
+        <div class="container foot">
+          <div class="support-foot-block">
+            <div class="foot-text">Поддержка:</div>
+            <div class="email-block">
+              <a id="email-link" class="ch-link foot-text" onClick="copyEmail();" value="omorozov375@yandex.ru"><i class="fa-solid fa-at"></i> Mail</a>
+              <div id="email-copy-message" class="foot-text"></div>
+            </div>
+            <a href="https://ollejk.t.me" class="ch-link foot-text" target="_blanc"><i class="fa-brands fa-telegram"></i> Telegram</a>
+          </div>
+          <div class="about-foot-block">
+            <a href='/about' class="ch-link foot-text">О проекте</a>
+            <a href="/settings" class="ch-link foot-text">Настройки <i class="fa-solid fa-gear"></i></a>
+            <a href="https://github.com/Olezha1241325/formoreal" class="ch-link foot-text" target="_blanc">Формореал на GitHub <i class="fa-brands fa-square-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../static/js/base.js"></script>
+  </body>
+</html>

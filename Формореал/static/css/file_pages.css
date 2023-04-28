@@ -1,0 +1,222 @@
+.main-section {
+  padding-bottom: 20px;
+}
+
+.main-section-nav {
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.nav-link {
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.nav-link-chosen {
+  border-radius: 0px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  pointer-events: none;
+}
+
+.main-section-form {
+  margin-left: 10%;
+  margin-right: 10%;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 30px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.main-section-form::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: none;  /* Optional: just make scrollbar invisible */
+}
+
+.m-file-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-file-form > * {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.key-text-input {
+  width: 60%;
+}
+
+.hour-text-input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.submit-button {
+  width: fit-content;
+  border: none;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  margin-top: 0px;
+  transition: all 0.2s ease-in;
+}
+
+.fast-submit-button {
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  transition: all 0.2s ease-in;
+}
+
+.radio-buttons-container * {
+  margin-bottom: 5px;
+}
+
+.radio-button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.radio-button-container input {
+  display: none;
+}
+
+.radio-button-container label {
+  font-size: 18px;
+  text-align: center;
+}
+
+.radio-button-container label:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  bottom: -5px;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.hour-input-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-height: 28px;
+}
+
+.hour-input-text {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.error-message-block {
+  border-style: dotted;
+  border-width: 2px;
+  margin-top: 5px;
+}
+
+.main-section-success {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15%;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-link {
+  font-size: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 50%;
+  margin-right: 20px;
+  max-height: 47px;
+}
+
+.success-text {
+  font-size: 30px;
+  align-self: center;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.main-section-info {
+  padding-left: 15%;
+}
+
+.value-result-block {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.copy-button {
+  border-style: solid;
+  border-width: 1px;
+  border-left-color: rgba(0, 0, 0, 0);
+  padding: 0px;
+  margin: 0px;
+  height: inherit;
+  width: 28px;
+}
+
+.copy-rect {
+  stroke-width: 1.5px;
+}
+
+.copy-message {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.look-or-load-section {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.look-or-load-section a:first-child {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  clip-path: inset(-5px 0px -5px -5px);
+}
+
+.look-or-load-section a:last-child {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  clip-path: inset(-5px -5px -5px 0px);
+}
+
+.result-button {
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.result-button:hover {
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.75);
+}

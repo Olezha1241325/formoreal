@@ -1,0 +1,81 @@
+q {
+  font-style: italic;
+}
+
+section {
+  font-size: 22px;
+}
+
+.problem-block section,
+.conclusion-block section {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.problem-block,
+.comparison-block {
+  background-size: cover;
+  background-position: center;
+}
+
+.solution-block section {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.problem-block div:first-child section,
+.solution-block div:first-child section {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.problem-block div:last-child section,
+.solution-block div:last-child section {
+  padding-bottom: 60px;
+}
+
+.comparison-block {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  overflow: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table td,
+.comparison-table th {
+  padding: 5px;
+  width: 50%;
+  vertical-align: top;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.comparison-table th {
+  padding-bottom: 15px;
+}
+
+.comparison-td {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.comparison-td div {
+  padding-left: 5px;
+  padding-right: 8px;
+  font-weight: 700;
+}
+
+.comparison-td p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.conclusion-block {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
